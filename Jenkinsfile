@@ -13,14 +13,14 @@ pipeline {
     	// compile and generate single executable jar with all dependencies
 		stage('Build') {
             steps {
-                sh 'Apache Maven 3.6.3'
+                sh 'mvn install'
             }
         }
         // build docker image of an application
 		stage('Package') {
             steps {
                 script {
-                    artifact = docker.build("sarathsoundar1/springboot:myapp")
+                    artifact = docker.build("sarathsoundar1/springboot")
                 }
             }
         }
