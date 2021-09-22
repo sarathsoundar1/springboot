@@ -13,7 +13,7 @@ pipeline {
     	// compile and generate single executable jar with all dependencies
 		stage('Build') {
             steps {
-                sh 'mvn install'
+                sh 'Apache Maven 3.6.3'
             }
         }
         // build docker image of an application
