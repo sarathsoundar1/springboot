@@ -20,7 +20,7 @@ pipeline {
 		stage('Package') {
             steps {
                 script {
-                    artifact = docker.build("praveenellaiyan/jenkins-springboot-app:myapp")
+                    artifact = docker.build("sarathsoundar1/springboot:myapp")
                 }
             }
         }
