@@ -1,0 +1,216 @@
+{
+  "METADATA_VERSION": 20002,
+  "allow_disabled_algorithms": false,
+  "F-Droid.apk": {
+    "hash": "654c41ed9848ce1c779d3b0d9ead9fcead8b51bfff74b77394603cd167d5bf80",
+    "hashType": "sha256",
+    "uses-permission": [
+      [
+        "android.permission.INTERNET",
+        null
+      ],
+      [
+        "android.permission.ACCESS_NETWORK_STATE",
+        null
+      ],
+      [
+        "android.permission.ACCESS_WIFI_STATE",
+        null
+      ],
+      [
+        "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+        null
+      ],
+      [
+        "android.permission.CHANGE_NETWORK_STATE",
+        null
+      ],
+      [
+        "android.permission.CHANGE_WIFI_STATE",
+        null
+      ],
+      [
+        "android.permission.BLUETOOTH",
+        null
+      ],
+      [
+        "android.permission.BLUETOOTH_ADMIN",
+        null
+      ],
+      [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        null
+      ],
+      [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        null
+      ],
+      [
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        null
+      ],
+      [
+        "android.permission.WRITE_SETTINGS",
+        null
+      ],
+      [
+        "android.permission.NFC",
+        null
+      ],
+      [
+        "android.permission.USB_PERMISSION",
+        22
+      ],
+      [
+        "android.permission.WAKE_LOCK",
+        null
+      ],
+      [
+        "android.permission.FOREGROUND_SERVICE",
+        null
+      ]
+    ],
+    "uses-permission-sdk-23": [
+      [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        null
+      ]
+    ],
+    "features": [],
+    "icons_src": {
+      "240": "res/drawable-hdpi-v4/ic_launcher.png",
+      "120": "res/drawable-ldpi-v4/ic_launcher.png",
+      "160": "res/drawable-mdpi-v4/ic_launcher.png",
+      "320": "res/drawable-xhdpi-v4/ic_launcher.png",
+      "480": "res/drawable-xxhdpi-v4/ic_launcher.png",
+      "640": "res/drawable-xxxhdpi-v4/ic_launcher.png",
+      "-1": "res/drawable-mdpi-v4/ic_launcher.png"
+    },
+    "icons": {
+      "640": "org.fdroid.fdroid.1015056.png",
+      "480": "org.fdroid.fdroid.1015056.png",
+      "320": "org.fdroid.fdroid.1015056.png",
+      "240": "org.fdroid.fdroid.1015056.png",
+      "160": "org.fdroid.fdroid.1015056.png",
+      "120": "org.fdroid.fdroid.1015056.png",
+      "0": "org.fdroid.fdroid.1015056.png"
+    },
+    "antiFeatures": {},
+    "packageName": "org.fdroid.fdroid",
+    "versionCode": 1015056,
+    "name": "F-Droid",
+    "versionName": "1.15.6",
+    "minSdkVersion": 22,
+    "targetSdkVersion": 25,
+    "sig": "9063aaadfff9cfd811a9c72fb5012f28",
+    "signer": "43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab",
+    "size": 8881348,
+    "apkName": "F-Droid.apk",
+    "icon": "org.fdroid.fdroid.1015056.png",
+    "added": 1688725565.368162
+  },
+  "Test.apk": {
+    "hash": "270b852d0a253e22827d7da8fa9300dbf3db48be414ec507a18c7b169b528a9e",
+    "hashType": "sha256",
+    "uses-permission": [
+      [
+        "com.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+        null
+      ]
+    ],
+    "uses-permission-sdk-23": [],
+    "features": [],
+    "icons_src": {},
+    "icons": {},
+    "antiFeatures": {},
+    "packageName": "com.test",
+    "versionCode": 1,
+    "name": "Test",
+    "versionName": "1.0",
+    "minSdkVersion": 21,
+    "targetSdkVersion": 33,
+    "sig": "be350a957aeda7ac3414c248e26af181",
+    "signer": "6a2ae9ba7f9953272ea2fe27fd4d09bb6c54eb8da652489771d6e9a1f8f88795",
+    "size": 5620357,
+    "apkName": "Test.apk",
+    "added": 1688728950.702193
+  },
+  "Test-V1.0.apk": {
+    "hash": "eb27486f7713783e43104519c3774b65aceda9391b33990586313452280d05ae",
+    "hashType": "sha256",
+    "uses-permission": [
+      [
+        "com.example.testproject.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+        null
+      ]
+    ],
+    "uses-permission-sdk-23": [],
+    "features": [],
+    "icons_src": {},
+    "icons": {},
+    "antiFeatures": {},
+    "packageName": "com.example.testproject",
+    "versionCode": 1,
+    "name": "Test Project",
+    "versionName": "1.0",
+    "minSdkVersion": 24,
+    "targetSdkVersion": 33,
+    "sig": "5af0f8fd70d9747c7eeab26872d17873",
+    "signer": "31801df06faf0fd0ee1208a2c1bc80dad6e66a25910ce27db082ec6f61a52ca6",
+    "size": 5494698,
+    "apkName": "Test-V1.0.apk",
+    "added": 1688988715.072357
+  },
+  "Test-v1.1.apk": {
+    "hash": "26084a8f16697a878331b1b33016b67a8e1b8d0b8982aa766a09a3cbd26fd7fd",
+    "hashType": "sha256",
+    "uses-permission": [
+      [
+        "com.example.testproject.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+        null
+      ]
+    ],
+    "uses-permission-sdk-23": [],
+    "features": [],
+    "icons_src": {},
+    "icons": {},
+    "antiFeatures": {},
+    "packageName": "com.example.testproject",
+    "versionCode": 1,
+    "name": "Test Project",
+    "versionName": "1.1",
+    "minSdkVersion": 24,
+    "targetSdkVersion": 33,
+    "sig": "5af0f8fd70d9747c7eeab26872d17873",
+    "signer": "31801df06faf0fd0ee1208a2c1bc80dad6e66a25910ce27db082ec6f61a52ca6",
+    "size": 5494698,
+    "apkName": "Test-v1.1.apk",
+    "added": 1688989075.579459
+  },
+  "Test-v1.2.apk": {
+    "hash": "cdc36dddff3f57aa8dfd7e1f9c61ea8e0e8a5a96da8865b6ab99675a0a47e3d9",
+    "hashType": "sha256",
+    "uses-permission": [
+      [
+        "com.example.testproject.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+        null
+      ]
+    ],
+    "uses-permission-sdk-23": [],
+    "features": [],
+    "icons_src": {},
+    "icons": {},
+    "antiFeatures": {},
+    "packageName": "com.example.testproject",
+    "versionCode": 2,
+    "name": "Test Project",
+    "versionName": "1.2",
+    "minSdkVersion": 24,
+    "targetSdkVersion": 33,
+    "sig": "5af0f8fd70d9747c7eeab26872d17873",
+    "signer": "31801df06faf0fd0ee1208a2c1bc80dad6e66a25910ce27db082ec6f61a52ca6",
+    "size": 5494693,
+    "apkName": "Test-v1.2.apk",
+    "added": 1688989203.3748
+  }
+}

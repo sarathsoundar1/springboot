@@ -1,0 +1,15 @@
+Categories:
+  - Communication
+
+License: GPL-3.0-or-later
+AuthorName: Test
+AuthorEmail: sarathkumar.soundar@coherent.in
+Description: |
+  This is a description of the app.
+
+  Author's Website: [http://135.181.200.160]
+
+Name: Test
+AutoUpdateMode: VersionCode
+UpdateCheckMode: Tags
+CurrentVersionCode: 2

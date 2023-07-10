@@ -1,0 +1,12 @@
+AuthorName: 'Test_Project'
+Categories:
+- fdroid
+License: GPL-3.0-or-later
+CurrentVersionCode: 2147483647
+IssueTracker: ''
+Name: Test Project
+SourceCode: ''
+Summary: ''
+WebSite: 'http://135.181.200.160'
+AutoUpdateMode: VersionCode
+UpdateCheckMode: RepoManifest

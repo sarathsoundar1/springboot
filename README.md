@@ -1,50 +1,128 @@
-# JENKINS
-Jenkins is a open source CI/CD tool for automated build, test and deploy across different environment.
+<div align="center">
 
-## CI - Continuous Integration
-CI is a development practice that enforce developers to synchronize code into a shared repository. Each and every check in that developer do will pass through various stages like build, test, package before the code is ready for deployment. This will detect problems earlier and notify the developers for fix.
+<p><img src="https://gitlab.com/fdroid/artwork/-/raw/master/fdroid-logo-2015/fdroid-logo.svg" width="200"></p>
 
-## CD -  Continuous Delivery
-CD ensures software product is delivered over a short cycle reliably.
+# F-Droid Server
+### Tools for maintaining an F-Droid repository system.
 
-## List of terminologies frequently used
-### Master
-A central process which is responsible for instruct nodes to execute task, manage plugins and configurations. 
-### Agent
-An agent is typically a machine, or container, which connects to a Jenkins master and executes tasks when directed by the master.
-### Node
-Node is a machine in jenkins environment capable of executing pipeline/projects. 
-### Executor
-It is nothing but the slot which is needed to execute task defined by node/pipeline/project.
-### Workspace
-A disposable directory on the file system of a Node where work can be done by a Pipeline or Project. Workspaces are typically left in place after a Build or Pipeline run completes unless specific Workspace cleanup policies have been put in place on the Jenkins Master.
-### Stage
-Stage is a block with distinct subset of tasks to be performed.
-### Step
-A single task.
-### Script
-Script block is enclosed in steps block and it has list of scripts to be executed in a declarative pipeline. 
-### Pipeline
-Pipeline is an automated series of process for getting the software from version control to users. Process could be build, test, security findings, package, publish and deploy. `Jenkinsfile` contains the various stages of the pipeline.
+</div>
 
-## Jenkins Integration
-Below were the prominent services that can be integrated with jenkins.
-1. Email Integration
-2. Slack Integration
-3. Github Integration
-4. Bitwise Integration
-5. JFrog Integration
-6. Sonarqube Integration
+---
 
-## GEMS in Jenkins
-### Organization Folder
-This feature in jenkins will get rid of onboarding new job for a new application. It will scan as per schedule configuration and detect and onboard application on to jenkins if it finds some new repositories.
-### CRON Scheduling
-Jenkins uses cron expression and lets you to schedule jobs to execute over a period of time.
+## What is F-Droid Server?
 
-````
-Example Project - jenkins-pipeline-spring-boot-app
+_fdroidserver_ is a suite of tools to publish and work with collections of
+Android apps (APK files) and other kinds of packages.  It is used to maintain
+the [f-droid.org application repository](https://f-droid.org/packages).  These
+same tools can be used to create additional or alternative repositories for
+publishing, or to assist in creating, testing and submitting metadata to the
+f-droid.org repository, also known as
+[_fdroiddata_](https://gitlab.com/fdroid/fdroiddata).
 
-Illustrate jenkins pipeline job to build, test, publish and deploy sample spring boot application.
-````
-![Screenshot from 2019-09-07 16-38-03](https://user-images.githubusercontent.com/36845597/64474134-f1de9180-d18d-11e9-985b-b428a6ecfcbf.png)
+For documentation, please see <https://f-droid.org/docs>.
+
+In the beginning, _fdroidserver_ was the complete server-side setup that ran
+f-droid.org.  Since then, the website and other parts have been split out into
+their own projects.  The name for this suite of tooling has stayed
+_fdroidserver_ even though it no longer contains any proper server component.
+
+
+## Installing
+
+There are many ways to install _fdroidserver_, including using a range of
+package managers.  All of the options are documented on the website:
+https://f-droid.org/docs/Installing_the_Server_and_Repo_Tools
+
+
+## Tests
+
+To run the full test suite:
+
+    tests/run-tests
+
+To run the tests for individual Python modules, see the _.TestCase_ files, e.g.:
+
+    tests/metadata.TestCase
+
+It is also possible to run individual tests:
+
+    tests/metadata.TestCase MetadataTest.test_rewrite_yaml_special_build_params
+
+There is a growing test suite that has good coverage on a number of key parts of
+this code base.  It does not yet cover all the code, and there are some parts
+where the technical debt makes it difficult to write unit tests.  New tests
+should be standard Python _unittest_ test cases.  Whenever possible, the old
+tests written in _bash_ in _tests/run-tests_ should be ported to Python.
+
+This test suite has built over time a bit haphazardly, so it is not as clean,
+organized, or complete as it could be.  We welcome contributions.  The goal is
+to move towards standard Python testing patterns and to expand the unit test
+coverage.  Before rearchitecting any parts of it, be sure to [contact
+us](https://f-droid.org/about) to discuss the changes beforehand.
+
+
+### Additional tests for different linux distributions
+
+These tests are also run on various configurations through GitLab CI. This is
+only enabled for `master@fdroid/fdroidserver` because it takes longer to
+complete than the regular CI tests.  Most of the time you won't need to worry
+about them, but sometimes it might make sense to also run them for your merge
+request. In that case you need to remove [these lines from .gitlab-ci.yml](https://gitlab.com/fdroid/fdroidserver/-/blob/0124b9dde99f9cab19c034cbc7d8cc6005a99b48/.gitlab-ci.yml#L90-91)
+and push this to a new branch of your fork.
+
+Alternatively [run them
+locally](https://docs.gitlab.com/runner/commands/README.html#gitlab-runner-exec)
+like this: `gitlab-runner exec docker ubuntu_lts`
+
+
+### Buildserver
+
+The tests for the whole build server setup are entirely separate
+because they require at least 200 GB of disk space, and 8 GB of
+RAM. These test scripts are in the root of the project, all starting
+with _jenkins-_ since they used to be run on https://jenkins.debian.net.
+
+
+## Documentation
+
+The API documentation based on the docstrings gets automatically
+published [here](https://fdroid.gitlab.io/fdroidserver) on every commit
+on the `master` branch.
+
+It can be built locally via
+
+```bash
+pip install -e .[docs]
+cd docs
+sphinx-apidoc -o ./source ../fdroidserver -M -e
+sphinx-autogen -o generated source/*.rst
+make html
+```
+
+To additionally lint the code call
+```bash
+pydocstyle fdroidserver --count
+```
+
+When writing docstrings you should follow the
+[numpy style guide](https://numpydoc.readthedocs.io/en/latest/format.html).
+
+
+## Translation
+
+Everything can be translated.  See
+[Translation and Localization](https://f-droid.org/docs/Translation_and_Localization)
+for more info.
+
+<div align="center">
+
+[![](https://hosted.weblate.org/widgets/f-droid/-/287x66-white.png)](https://hosted.weblate.org/engage/f-droid)
+
+<details>
+<summary>View translation status for all languages.</summary>
+
+[![](https://hosted.weblate.org/widgets/f-droid/-/fdroidserver/multi-auto.svg)](https://hosted.weblate.org/engage/f-droid/?utm_source=widget)
+
+</details>
+
+</div>
