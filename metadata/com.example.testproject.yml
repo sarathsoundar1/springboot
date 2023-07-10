@@ -9,4 +9,4 @@ SourceCode: ''
 Summary: ''
 WebSite: 'http://135.181.200.160'
 AutoUpdateMode: VersionCode
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: Tags
